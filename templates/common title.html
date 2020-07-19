@@ -1,0 +1,35 @@
+
+{% load static %}
+<html>
+  <head>
+      <title>
+          George's Institute
+      </title>
+  </head>
+  <body bgcolor="#faebd7">
+     <table align="center" border="0">
+         <tr>
+             <th>
+                 <img src="{% static 'images/educational logo.jpg' %}" width="150" height="150">
+             </th>
+             <th  style="font-size: 70px;font-family: 'fantasy';color: wheat;background-color: brown;">
+                 George's Institute
+             </th>
+         </tr>
+         <tr>
+             <th colspan="2">
+                 {% block pwn %}
+
+
+
+                 {% endblock %}
+             </th>
+         </tr>
+     <tr>
+            <th colspan="9" style="color: brown;background-color: wheat;font-size: 30px;font-family:'italic'">
+                  CopyRight@George
+            </th>
+         </tr>
+     </table>
+  </body>
+</html>
