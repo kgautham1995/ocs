@@ -87,6 +87,21 @@ def save_student(request):
     co = request.POST.get('n5')
     st = StudentModel(name=na,contact_no=cno,email=em,password=pa)
     st.save()
-    st.scourses.set(co)
+    st.courses.set(co)
     messages.success(request,'Data Saved')
     return redirect('save_student')
+
+
+def stu_reg(request):
+    return render(request,"stu_reg.html")
+
+
+def student_login(request):
+    ema=request.post.get('e1')
+    pw=request.post.get('e2')
+    if ema in StudentModel.email:
+        if pw in StudentModel.password:
+            return redirect(request,"student_home.html")
+    else:
+        messages.success(request, 'Invalid Login Credentials')
+        return redirect(request, "stu_login.html")

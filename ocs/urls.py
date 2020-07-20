@@ -31,5 +31,7 @@ urlpatterns = [
     path('delete_record/', views.delete_record, name='delete_record'),
     path('view_online_course/', views.view_online_course, name='view_online_course'),
     path('stu_login/', views.stu_login, name='stu_login'),
-    path('save_student/', views.save_student, name='save_student')
+    path('stu_reg/', views.stu_reg, name='stu_reg'),
+    path('save_student/', views.save_student, name='save_student'),
+    path('student_login/', views.student_login, name='student_login')
 ]
